@@ -14,6 +14,7 @@ body {
   background-color: #23253a;
   color: white;
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* HEADER */
@@ -22,7 +23,6 @@ header {
   background: #23253a;
   padding: 30px 4%;
 }
-
 
 .menu {
   max-width: 1280px;
@@ -108,18 +108,19 @@ header {
   font-size: 26px;
   color: white;
   cursor: pointer;
-  position: absolute;
-  top: 35px;
-  right: 4%;
+  position: relative;
+  margin-left: auto;
 }
+
+
 .menu-mobile {
   display: none;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(30, 30, 47, 0.98); /* Fundo sólido com leve transparência */
+  background-color: rgba(30, 30, 47, 0.98);
   position: fixed;
   width: 100%;
-  top: 70px; /* mais abaixo do header */
+  top: 70px;
   left: 0;
   z-index: 999;
   padding: 25px 0;
@@ -161,7 +162,6 @@ header {
   color: #f5af31;
   border: 2px solid #f5af31;
 }
-
 
 /* INÍCIO */
 .inicio {
@@ -330,7 +330,7 @@ header {
 .info-projeto {
   padding: 20px;
   text-align: left;
-  min-height: 260px; /* define altura mínima para manter todos iguais */
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -373,30 +373,56 @@ header {
   .menu-desktop {
     display: none;
   }
+
   .menu-hamburguer {
     display: block;
   }
-  .inicio {
-    flex-direction: column;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  .imageminicio img {
-    margin-top: 30px;
-    width: 280px;
-  height: 280px;
-  }
+
+ .inicio {
+  flex-direction: column;
+  padding: 40px 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.bemvindo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.imageminicio {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.imageminicio img {
+  margin-top: 20px;
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
   .bemvindo .mechamo,
   .bemvindo .estagiario,
   .bemvindo .meuportfolio {
     flex-direction: column;
     font-size: 20px;
+    text-align: center;
   }
+
   .mechamo .vitorribeiro,
   .meuportfolio .bemvindoaomeuportfolio {
     margin-left: 0;
   }
 }
+
 
 /* Overlay */
 .overlay {
@@ -409,7 +435,6 @@ header {
   display: none;
   z-index: 998;
 }
-
 .overlay.show {
   display: block;
 }
@@ -420,21 +445,19 @@ header {
   top: 0;
   left: -250px;
   width: 250px;
-  height: 100dvh;
+  height: 100vh;     /* fallback para navegadores antigos */
+  height: 100dvh;    /* altura visível da tela */
   background-color: #2b2e41;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 60px 30px 40px; /* espaçamento inferior garantido */
+  padding: 60px 30px 40px;
   gap: 25px;
   transition: left 0.3s ease;
   z-index: 999;
   box-shadow: 4px 0 8px rgba(0,0,0,0.3);
-  overflow-y: auto; /* ✅ importante para garantir que role se necessário */
+  overflow-y: auto;
 }
-
-
-
 
 .menu-slide.open {
   left: 0;
@@ -446,7 +469,6 @@ header {
   font-size: 17px;
   transition: color 0.3s;
 }
-
 .menu-slide a:hover {
   color: #f5af31;
 }
@@ -459,7 +481,6 @@ header {
   border-radius: 10px;
   margin-top: 20px;
 }
-
 .btn-slide-contato:hover {
   background-color: #23253a;
   border: 2px solid #f5af31;
@@ -470,15 +491,12 @@ header {
   display: none;
 }
 
-
 .texto-finneo.curta {
   flex: 1;
 }
-
 .texto-finneo.completa.hidden {
   display: none;
 }
-
 .btn-vermais {
   align-self: flex-start;
   background-color: transparent;
@@ -489,3 +507,11 @@ header {
   margin-top: 10px;
   text-decoration: underline;
 }
+@media (max-width: 768px) {
+  .inicio .imageminicio img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+

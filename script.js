@@ -17,4 +17,9 @@ function toggleMenu() {
       completa.classList.add('hidden');
       botao.textContent = 'Ver mais';
     }
+    
+
+    
   }
+
+  

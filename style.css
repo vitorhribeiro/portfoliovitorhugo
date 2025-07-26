@@ -1,0 +1,354 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #23253a;
+}
+
+/* MENU */
+.menu {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.menu .nomemenu .dev {
+  color: white;
+  font-size: 25px;
+  margin-bottom: -15px;
+}
+.menu .nomemenu .front {
+  color: #f5af31;
+  font-size: 30px;
+  font-family: "Lobster", serif;
+}
+
+header {
+  padding: 30px 4%;
+}
+header > .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 15.5px;
+  transition: 0.5s;
+}
+header a:hover {
+  color: #f5af31;
+}
+header a:not(.btn-contatomenu)::after {
+  content: "";
+  background-color: #f5af31;
+  height: 3px;
+  width: 0%;
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+header a:hover::after {
+  width: 100%;
+}
+header nav ul a {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0px 40px;
+}
+header .btn-contatomenu {
+  padding: 10px 40px;
+  font-size: 17px;
+  background-color: #f5af31;
+  border-radius: 15px;
+  cursor: pointer;
+  border: solid 2px #f5af31;
+  transition: 0.5s;
+  font-weight: 500;
+}
+header .btn-contatomenu:hover {
+  color: white;
+  background-color: transparent;
+}
+
+/* INÍCIO */
+.inicio {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 150px;
+}
+.inicio .bemvindo {
+  color: white;
+}
+.inicio .bemvindo .oladev {
+  font-size: 55px;
+  color: #f5af31;
+}
+.inicio .bemvindo .mechamo {
+  display: flex;
+  font-size: 30px;
+  color: white;
+}
+.inicio .bemvindo .mechamo .vitorribeiro {
+  font-size: 30px;
+  color: #f5af31;
+  margin-left: 5px;
+}
+.inicio .bemvindo .estagiario {
+  display: flex;
+  font-size: 22px;
+  color: white;
+}
+.inicio .bemvindo .meuportfolio {
+  display: flex;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 30px;
+}
+.inicio .bemvindo .meuportfolio .bemvindoaomeuportfolio {
+  font-size: 35px;
+  color: #f5af31;
+  margin-left: 5px;
+}
+.inicio .btn-especialidades {
+  text-decoration: none;
+  color: white;
+  padding: 10px 40px;
+  font-size: 17px;
+  background-color: transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  border: solid 2px #f5af31;
+  transition: 0.5s;
+  font-weight: 500;
+}
+.inicio .btn-especialidades:hover {
+  color: white;
+  background-color: #f5af31;
+}
+.inicio .imageminicio {
+  max-width: 450px;
+  min-height: 450px;
+}
+
+/* ESPECIALIDADES (conforme a imagem final) */
+.especialidades {
+  background-color: #2b2e41;
+  padding: 100px 40px;
+}
+
+.container-especialidades {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+@media (max-width: 1023px) {
+  .container-especialidades {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container-especialidades {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: #23253a;
+  width: 300px;
+  height: 350px;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card .icone {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.card .icone img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.card p {
+  font-size: 13.5px;
+  line-height: 1.4;
+  text-align: left;
+}
+.sobre {
+  background-color: #23253a;
+  background-image: url("imagens/fundo-sobre.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 40px;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+
+.container-sobre {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.titulo-sobre {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #f5af31;
+  font-family: "Lobster", cursive;
+}
+
+.descricao-sobre {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.btn-curriculo {
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: 2px solid #f5af31;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-curriculo:hover {
+  background-color: #f5af31;
+  color: #23253a;
+}
+.foto-sobre {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.foto-sobre img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-bottom: 40px;
+  object-fit: cover;
+  border: none;
+}
+
+.projetos {
+  background-color: #2b2e41;
+  padding: 100px 40px;
+  color: white;
+  text-align: center;
+}
+
+.titulo-projetos {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #f5af31;
+  font-family: "Lobster", cursive;
+}
+
+.container-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projeto-card {
+  background-color: #23253a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
+}
+
+.projeto-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info-projeto {
+  padding: 20px;
+}
+
+.info-projeto h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #f5af31;
+}
+
+.info-projeto p {
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+.footer {
+  background-color: #1e1e2f;
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+  margin-top: 60px;
+}
+
+.container-footer p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.icones-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icones-sociais img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+}
+
+.icones-sociais img:hover {
+  transform: scale(1.2);
+}

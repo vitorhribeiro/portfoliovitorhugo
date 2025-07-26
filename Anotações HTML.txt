@@ -1,0 +1,6 @@
+Anotações HTML
+
+div.teste (atalho para criar uma div)
+ctrl+ ; (atalho para criar comentário)
+! (cria o html básico)
+link:css (atalho para criar o link para o css)
